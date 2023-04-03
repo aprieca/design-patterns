@@ -5,8 +5,7 @@ public class Logger {
     private static volatile Logger instance;
     private int count = 0;
 
-    private Logger() {
-    }
+    private Logger() {}
 
     public static Logger getinstance() {
         if (instance == null) {

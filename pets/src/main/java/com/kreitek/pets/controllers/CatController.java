@@ -9,12 +9,10 @@ import java.util.List;
 
 public class CatController implements Controller {
 
-    // TODO Logger declaration
     Logger logger = Logger.getinstance();
 
     @Override
     public String executePut(String petName, String ownerName, String telephone) {
-        // TODO logger.debug("CatController.executePut " + petName + "," + ownerName + "," + telephone);
         logger.debug("CatController.executePut " + petName + "," + ownerName + "," + telephone);
         Cat cat = new Cat(petName, ownerName, telephone);
         DbService dbService = DbService.getInstance();
@@ -24,7 +22,7 @@ public class CatController implements Controller {
 
     @Override
     public String executeGet() {
-        // TODO logger.debug("CatController.executeGet CATS");
+        logger.debug("CatController.executeGet CATS");
         DbService dbService = DbService.getInstance();
         List<Cat> cats = dbService.getCats();
         String response = "";
