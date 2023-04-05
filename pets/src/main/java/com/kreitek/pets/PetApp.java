@@ -3,14 +3,15 @@ package com.kreitek.pets;
 import com.kreitek.pets.controllers.CatController;
 import com.kreitek.pets.controllers.ControllerFactory;
 import com.kreitek.pets.controllers.DogController;
+
 import java.util.Scanner;
 
 
 public class PetApp {
+    static Logger logger = Logger.getinstance();
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         ControllerFactory controllerFactory = new ControllerFactory();
-        Logger logger = Logger.getinstance();
         boolean end = false;
         logger.debug("Pet app has been initiated");
         while (!end) {
@@ -82,8 +83,8 @@ public class PetApp {
 
     private static String waitForNewCommand() {
         System.out.print("Enter a command : ");
-        Scanner scanner = new Scanner(System. in);
-        return scanner. nextLine();
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
 
 
